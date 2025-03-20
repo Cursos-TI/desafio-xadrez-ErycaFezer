@@ -4,7 +4,7 @@ int main (){
 
 int torre = 0;
 int bispo = 0;
-int rainha;
+int rainha, cavalo, i, j;
 
 //movimentacao da torre
 
@@ -31,6 +31,22 @@ int rainha;
     for(rainha = 0; rainha < 8; rainha++){
         printf("Esquerda\n");
     }
+
+//movimentacao do cavalo
+
+        printf("MOVIMENTACAO DO CAVALO:\n");
+
+    for(i = 0; i < 2; i++)
+    {
+        printf("Baixo\n");
+
+        for(j = 0; j < i; j++){
+
+        printf("Esquerda\n");
+        }
+        
+    }
+
 
 
 return 0;
