@@ -1,51 +1,72 @@
 #include <stdio.h>
 
+void TorreRecursivo(int numero){
+    if (numero > 0){
+
+        printf("Direita\n");
+        TorreRecursivo(numero - 1);
+
+    }
+}
+
+void BispoRecursivo(int numero){
+        for(int bispo = 0; bispo < numero; bispo++){
+            printf("Cima, ");
+            printf("Direita\n");
+        }
+        }
+
+void RainhaRecursivo(int numero){
+    if (numero > 0){
+         printf("Esquerda\n");
+        RainhaRecursivo(numero - 1);
+    }
+    }
+
+void CavaloRecursivo(int i, int j){
+
+    for(i = 0; i < 2; i++)
+    {
+        printf("Cima\n");
+
+        for(j = 0; j < i; j++){
+
+        printf("Direita\n");
+        }
+        
+   }
+}
+
 int main (){
 
-int torre = 0;
-int bispo = 0;
-int rainha, cavalo, i, j;
+int torre = 5;
+int bispo = 5;
+int rainha = 8;
+int icavalo = 0, jcavalo = 0;
 
 //movimentacao da torre
 
         printf("MOVIMENTACAO DA TORRE:\n");
         
-    while(torre < 5){
-        printf("Direita\n");
-        torre++;
-    }
+    TorreRecursivo(torre);
 
 //movimentacao do bispo
 
         printf("MOVIMENTACAO DO BISPO:\n");
 
-    do{
-        printf("Cima, Direita\n");
-        bispo++;
-    }while (bispo < 5);
+    BispoRecursivo(bispo);
 
 //movimentacao da rainha
 
         printf("MOVIMENTACAO DA RAINHA:\n");
     
-    for(rainha = 0; rainha < 8; rainha++){
-        printf("Esquerda\n");
-    }
+    RainhaRecursivo(rainha);
 
 //movimentacao do cavalo
 
         printf("MOVIMENTACAO DO CAVALO:\n");
 
-    for(i = 0; i < 2; i++)
-    {
-        printf("Baixo\n");
-
-        for(j = 0; j < i; j++){
-
-        printf("Esquerda\n");
-        }
-        
-    }
+    CavaloRecursivo(icavalo, jcavalo);
 
 
 
